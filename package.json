@@ -1,0 +1,21 @@
+{
+  "name": "simple-api-login",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/functions/*.js",
+  "scripts": {
+    "start": "func start",
+    "build": "func build && npx prisma generate",
+    "test": "echo \"No tests yet...\""
+  },
+  "dependencies": {
+    "@azure/functions": "^4.0.0",
+    "@prisma/client": "^5.22.0",
+    "dotenv": "^16.4.5",
+    "mssql": "^11.0.1",
+    "prisma": "^5.22.0"
+  },
+  "devDependencies": {
+    "azure-functions-core-tools": "^4.x"
+  }
+}
