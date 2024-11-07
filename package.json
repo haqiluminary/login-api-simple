@@ -5,7 +5,7 @@
   "main": "src/functions/*.js",
   "scripts": {
     "start": "func start",
-    "build": "npx prisma generate && func start",
+    "build": "npx prisma generate",
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
