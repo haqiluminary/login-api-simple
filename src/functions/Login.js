@@ -37,7 +37,7 @@ app.http('Login', {
 
         if (user && user.password === body.password) {
             context.res = { status: 200, 
-                            body: { message:"User Data", data: user.name },
+                            body: { message:"User Data", data: {name: user.name} },
                             headers: {
                                 'Access-Control-Allow-Origin': '*', // Allow any origin
                                 'Access-Control-Allow-Methods': 'POST, OPTIONS',
