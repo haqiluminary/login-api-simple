@@ -45,7 +45,7 @@ app.http('Login', {
     } catch (error) {
         context.log('Database error:', error);
         context.res = { status: 500, 
-                        body: {message: "Server error", data: error, sqlserver: process.env.DATABASE_URL}};
+                        body: {message: "Server error", data: error}};
     }
 
         return {

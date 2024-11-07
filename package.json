@@ -5,8 +5,8 @@
   "main": "src/functions/*.js",
   "scripts": {
     "start": "func start",
-    "build": "npx prisma generate",
-    "test": "echo \"No tests yet...\""
+    "test": "echo \"No tests yet...\"",
+    "postinstall": "npx prisma generate"
   },
   "dependencies": {
     "@azure/functions": "^4.0.0",
