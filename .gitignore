@@ -51,4 +51,4 @@ __azurite_db*__.json
 .vscode
 
 #package-lock.json
-package-lock.json
+./package-lock.json
