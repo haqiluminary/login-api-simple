@@ -16,12 +16,12 @@ app.http('Login', {
 
         if (!body.name || !body.password) {
             context.res = { status: 400, 
-                            body: { message: 'Name and password are required fields.', data: {},
+                            body: { message: 'Name and password are required fields.', data: {} },
                             headers: {
                                 'Access-Control-Allow-Origin': '*', // Allow any origin
                                 'Access-Control-Allow-Methods': 'POST, OPTIONS',
                                 'Access-Control-Allow-Headers': 'Content-Type',
-                            }, }};
+                            }};
             return {
                 ...context.res,
                 body: JSON.stringify(context.res.body)
@@ -42,30 +42,30 @@ app.http('Login', {
 
         if (user && user.password === body.password) {
             context.res = { status: 200, 
-                            body: { message:"User Data", data: userData,
+                            body: { message:"User Data", data: userData },
                             headers: {
                                 'Access-Control-Allow-Origin': '*', // Allow any origin
                                 'Access-Control-Allow-Methods': 'POST, OPTIONS',
                                 'Access-Control-Allow-Headers': 'Content-Type',
-                                }, }};
+                            }};
         } else {
             context.res = { status: 401, 
-                            body: { message: "Invalid credentials", data: {}, 
+                            body: { message: "Invalid credentials", data: {} },
                             headers: {
                                 'Access-Control-Allow-Origin': '*', // Allow any origin
                                 'Access-Control-Allow-Methods': 'POST, OPTIONS',
                                 'Access-Control-Allow-Headers': 'Content-Type',
-                            }, }};
+                            }};
         }
     } catch (error) {
         context.log('Database error:', error);
         context.res = { status: 500, 
-                        body: {message: "Server error", data: error, 
+                        body: {message: "Server error", data: error},
                         headers: {
                             'Access-Control-Allow-Origin': '*', // Allow any origin
                             'Access-Control-Allow-Methods': 'POST, OPTIONS',
                             'Access-Control-Allow-Headers': 'Content-Type',
-                        }, }};
+                        }};
     }
 
         return {
