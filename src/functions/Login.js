@@ -35,14 +35,9 @@ app.http('Login', {
             where: { name: body.name },
         });
 
-        let userData = {
-            id: user.id,
-            name: user.name,
-        };
-
         if (user && user.password === body.password) {
             context.res = { status: 200, 
-                            body: { message:"User Data", data: userData },
+                            body: { message:"User Data", data: user.name },
                             headers: {
                                 'Access-Control-Allow-Origin': '*', // Allow any origin
                                 'Access-Control-Allow-Methods': 'POST, OPTIONS',
