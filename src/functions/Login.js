@@ -35,7 +35,9 @@ app.http('Login', {
             where: { name: body.name },
         });
 
-        if (user && user.password === body.password) {
+        context.log('User:', {user});
+
+        if (user && user.password == body.password) {
             context.res = { status: 200, 
                             body: { message:"User Data", data: {name: user.name} },
                             headers: {
